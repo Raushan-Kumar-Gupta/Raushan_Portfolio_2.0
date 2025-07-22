@@ -314,14 +314,14 @@ const AboutSection = () => {
                     Skills
                 </h1> */}
                 <SkillContainer>
-                    {skills.map((skill) => (
-                        <Skill>
+                    {skills.map((skill, skillIdx) => (
+                        <Skill key={skill.title || skillIdx}>
                             <SkillTitle className="text-gray-900">
                                 {skill.title}
                             </SkillTitle>
                             <SkillList>
-                                {skill.skills.map((item) => (
-                                    <SkillItem>
+                                {skill.skills.map((item, itemIdx) => (
+                                    <SkillItem key={item.name || itemIdx}>
                                         <SkillImage src={item.image} />
                                         {item.name}
                                     </SkillItem>
@@ -339,8 +339,8 @@ const AboutSection = () => {
             </h1>
             <CertificationContainer>
                 <div className="certification_container">
-                    {certifications.map((certification) => (
-                        <div className="certification_list">
+                    {certifications.map((certification, certIdx) => (
+                        <div className="certification_list" key={certification.title || certIdx}>
                             <Bounce>
                                 <InsideCertification>
                                     {/* <ImageBox color={certification.color} /> */}
@@ -378,8 +378,8 @@ const AboutSection = () => {
                 </EducationTitle>
                 <EducationContainer>
                     <div className="education_list">
-                        {education.map((education) => (
-                            <div className="education">
+                        {education.map((education, idx) => (
+                            <div className="education" key={education.id || idx}>
                                 <Slide direction="right" delay={3}>
                                     <EducationCard>
                                         {/* <ImageBox color={education.color} /> */}

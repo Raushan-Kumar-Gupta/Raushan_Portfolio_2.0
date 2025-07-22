@@ -12,7 +12,6 @@ const Contact = ({ onClose }) => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
-    const [isSent, setIsSent] = useState(false);
     const form = useRef();
 
     // const notify = () =>
@@ -56,14 +55,11 @@ const Contact = ({ onClose }) => {
             .then(
                 (result) => {
                     document.getElementById("contact_form").reset();
-                    setIsSent(true);
-                    // alert("Message sent successfully! 😄");
                     toastNotification();
                     // notify();
                 },
                 (error) => {
                     console.error(error);
-                    setIsSent(false);
                 }
             );
 

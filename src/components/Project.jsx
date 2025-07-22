@@ -53,12 +53,10 @@ const ToggleButton = styled.p`
     color: #1d1d1d;
     text-align: center;
     margin-top: 5px;
-    padding: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 5px 15px;
     border-radius: 10px;
     cursor: pointer;
-    ${({ active }) => active && { background: "#FFCD6D", color: "#0f0f0f" }};
+    ${({ $active }) => $active && { background: "#FFCD6D", color: "#0f0f0f" }};
     &:hover {
         background-color: #9573dd;
         color: #fff;
@@ -81,50 +79,26 @@ const Project = () => {
         <Wrapper id="project">
             <ProjectTitle>Project</ProjectTitle>
             <ToggleButtonGroup>
-                {activeCategory === "all" ? (
-                    <ToggleButton
-                        active
-                        value="all"
-                        onClick={() => setActiveCategory("all")}>
-                        All
-                    </ToggleButton>
-                ) : (
-                    <ToggleButton
-                        value="all"
-                        onClick={() => setActiveCategory("all")}>
-                        All
-                    </ToggleButton>
-                )}
+                <ToggleButton
+                    $active={activeCategory === "all"}
+                    value="all"
+                    onClick={() => setActiveCategory("all")}>
+                    All
+                </ToggleButton>
                 <div className="divider"></div>
-                {activeCategory === "web app" ? (
-                    <ToggleButton
-                        active
-                        value="web app"
-                        onClick={() => setActiveCategory("web app")}>
-                        Web App
-                    </ToggleButton>
-                ) : (
-                    <ToggleButton
-                        value="web app"
-                        onClick={() => setActiveCategory("web app")}>
-                        Web App
-                    </ToggleButton>
-                )}
+                <ToggleButton
+                    $active={activeCategory === "web app"}
+                    value="web app"
+                    onClick={() => setActiveCategory("web app")}>
+                    Web App
+                </ToggleButton>
                 <div className="divider"></div>
-                {activeCategory === "machine learning" ? (
-                    <ToggleButton
-                        active
-                        value="machine learning"
-                        onClick={() => setActiveCategory("machine learning")}>
-                        Machine Learning
-                    </ToggleButton>
-                ) : (
-                    <ToggleButton
-                        value="machine learning"
-                        onClick={() => setActiveCategory("machine learning")}>
-                        Machine Learning
-                    </ToggleButton>
-                )}
+                <ToggleButton
+                    $active={activeCategory === "machine learning"}
+                    value="machine learning"
+                    onClick={() => setActiveCategory("machine learning")}>
+                    Machine Learning
+                </ToggleButton>
             </ToggleButtonGroup>
             <ProjectContainer>
                 {activeCategory === "all" &&
