@@ -6,7 +6,7 @@ import AnimatedCursor from "react-animated-cursor";
 import colors from "../src/assets/colors";
 import AboutSection from "../src/components/AboutSection";
 import "./App.scss";
-import { ToastContainer } from "react-toastify";
+// import { ToastContainer } from "react-toastify";
 import Project from "./components/Project";
 import Footer from "./components/Footer";
 // import PdfViewer from "./components/PdfViewer";
