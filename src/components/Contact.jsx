@@ -12,7 +12,7 @@ const Contact = ({ onClose }) => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
-    // const [isSent, setIsSent] = useState(false);
+    const [isSent, setIsSent] = useState(false);
     const form = useRef();
 
     // const notify = () =>
