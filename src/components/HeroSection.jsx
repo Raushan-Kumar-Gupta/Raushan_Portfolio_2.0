@@ -1,5 +1,4 @@
 "use client";
-import { Github } from "lucide-react";
 import "../styles/herosection.scss";
 import UseAnimations from "react-useanimations";
 import download from "react-useanimations/lib/download";
@@ -8,10 +7,7 @@ import github from "react-useanimations/lib/github";
 // import Zoom from "react-reveal/Zoom";
 import { motion } from "framer-motion";
 import { useState, useEffect, useMemo } from "react";
-import Blob from "../assets/Blob";
 import "animate.css";
-import HeroParticle from "./Particles/HeroParticle";
-import { ToastContainer, toast } from "react-toastify";
 
 const HeroSection = () => {
   //   const jsonData = `res.status(200).json({
@@ -141,6 +137,7 @@ const HeroSection = () => {
           className="download-btn"
           download="Raushan_Resume"
           target="_blank"
+          rel="noreferrer" // <-- Added for security
           onMouseEnter={handleResumeMouseEnter}
           onMouseLeave={handleResumeMouseLeave}
         >
@@ -158,6 +155,7 @@ const HeroSection = () => {
         <a
           href="https://github.com/Raushan-Kumar-Gupta"
           target="_blank"
+          rel="noreferrer" // <-- Added for security
           className="my-work-btn"
           onMouseEnter={handleGithubMouseEnter}
           onMouseLeave={handleGithubMouseLeave}

@@ -16,7 +16,7 @@ const PopupInfo = ({ show }) => {
                 <div>
                     <img
                         src={raushanImg}
-                        alt="mera-photo-hai"
+                        alt="Raushan Gupta"
                         className="image"
                     />
                 </div>
